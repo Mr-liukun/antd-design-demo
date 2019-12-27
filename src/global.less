@@ -1,0 +1,132 @@
+@import '~antd/es/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.ant-pro-sider-menu-sider {
+  height: 100%;
+  overflow-y: auto;
+}
+.ant-page-header.has-breadcrumb {
+  background-color: #f0f2f5;
+}
+//全局样式，不做css-modules处理，所以不需要global修饰，在antd样式之前加载，会被antd覆盖
+p {
+  margin-bottom: 0 !important;
+}
+/* chrome & safari 浏览器 */
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 6px; /*高宽分别对应横竖滚动条的尺寸*/
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background: #cccccc;
+}
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+}
+.card-title {
+  padding-bottom: 20px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+}
+.tableListForm {
+  .ant-form-item {
+    display: flex !important;
+    margin-right: 0 !important;
+    margin-bottom: 24px !important;
+    > .ant-form-item-label {
+      width: auto;
+      padding-right: 8px;
+      line-height: 32px;
+    }
+    .ant-form-item-control {
+      line-height: 32px;
+    }
+  }
+  .ant-form-item-control-wrapper {
+    flex: 1;
+  }
+}
+.go-back-header {
+  .ant-card-body {
+    padding: 10px 24px !important;
+    margin-bottom: 20px;
+  }
+}
+.td-text-overflow {
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  /*! autoprefixer: off */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /*! autoprefixer: on */
+  overflow: hidden;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.btn-delete:hover {
+  color: #f54e44 !important;
+}
+.tebleOverflow {
+  .ant-table-body {
+    overflow-x: auto !important;
+  }
+}
